@@ -170,6 +170,11 @@ export function ProjectVisual({ kind }: { kind: Project['kind'] }) {
       top: 'PATCHES → ATTENTION',
       bottom: 'CNN · VISION TRANSFORMER',
     },
+    ml: {
+      Icon: ScanEye,
+      top: 'MEASURE → VALIDATE → SCORE',
+      bottom: 'ICU DATA · AUROC',
+    },
     trading: {
       Icon: ChartNoAxesCombined,
       top: 'ORDER → MATCH → UPDATE',

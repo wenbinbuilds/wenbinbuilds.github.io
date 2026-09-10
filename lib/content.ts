@@ -25,10 +25,12 @@ export type Project = {
     | 'fullstack'
     | 'architecture'
     | 'vision'
+    | 'ml'
     | 'trading';
   source: string | null;
   sourceStatus?: string;
   presentation?: { label: string; url: string };
+  artifact?: { src: string; alt: string; caption: string };
   pending?: boolean;
   problem: string;
   solution: string;
@@ -312,6 +314,45 @@ export const projects: Project[] = [
       'Part of my undergraduate AI research work with Walbridge through the University of Michigan Multidisciplinary Design Program, January 2026–Present.',
     contextPending:
       'A public source or demo link is pending; internal enterprise records are not included.',
+  },
+  {
+    slug: 'clinical-mortality-prediction',
+    title: 'Clinical Mortality Prediction',
+    category: 'MACHINE LEARNING / EECS 445',
+    description:
+      'A supervised-learning workflow that turns ICU observations into mortality risk scores, then compares linear and kernel models with AUROC-focused evaluation.',
+    technologies: ['Python', 'scikit-learn', 'NumPy', 'pandas', 'Logistic Regression', 'Kernel Ridge'],
+    group: 'AI & Machine Learning',
+    kind: 'ml',
+    source: null,
+    sourceStatus: 'EECS 445 coursework',
+    artifact: {
+      src: '/clinical-mortality-roc.png',
+      alt: 'ROC curves comparing two logistic-regression class-weight settings.',
+      caption: 'ROC curves recorded for two class-weight settings at C = 1.0.',
+    },
+    problem:
+      'Clinical data is incomplete, heterogeneous, and class-imbalanced. The task was to build a reproducible pipeline that predicts mortality from patient observations collected during the first 48 hours of ICU admission.',
+    solution:
+      'I converted static and time-series records into a 40-feature matrix, imputed missing values with feature means, normalized columns, and compared regularized logistic regression with linear and RBF kernel-ridge approaches.',
+    features: [
+      {
+        title: 'Feature pipeline',
+        text: 'Extract static measurements and maximum time-series values, replace unknown values with missing values, then impute and min-max normalize the resulting feature matrix.',
+      },
+      {
+        title: 'Model selection',
+        text: 'Use stratified five-fold cross-validation to sweep L1/L2 logistic-regression regularization and RBF kernel parameters, selecting models by AUROC.',
+      },
+      {
+        title: 'Evaluation record',
+        text: 'The saved challenge experiment records a 0.8036 cross-validation AUROC for L1 logistic regression with C = 1.0, alongside confusion-matrix and ROC outputs.',
+      },
+    ],
+    evidence:
+      'EECS 445 Project 1 implementation and saved experiment outputs reviewed from the local course project directory.',
+    contextPending:
+      'A project date and a public source or demo link are pending.',
   },
   {
     slug: 'dormdash',

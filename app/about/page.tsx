@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Cpu, Layers, Terminal } from 'lucide-react';
 import { PageHeading, SectionHeading } from '@/components/portfolio';
 import { profile } from '@/lib/content';
@@ -56,10 +57,14 @@ export default function About() {
           </p>
         </div>
         <article className="education-card">
-          <div className="portrait-placeholder" aria-label="Professional photo pending">
-            <span aria-hidden="true">WL</span>
-            <small>PHOTO PENDING</small>
-          </div>
+          <Image
+            className="portrait"
+            src="/wenbin-liao-headshot.jpg"
+            alt="Wenbin Liao in a suit and tie"
+            width={2733}
+            height={3643}
+            priority
+          />
           <div className="education-mark" aria-hidden="true">
             M
           </div>

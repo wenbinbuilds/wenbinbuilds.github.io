@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { InternalLink as Link } from '@/components/internal-link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowUpRight, ArrowRight } from 'lucide-react';
@@ -49,7 +50,19 @@ export default async function ProjectDetail({ params }: Props) {
         />
       </div>
       <div className="detail-hero">
-        <ProjectVisual kind={p.kind} />
+        {p.artifact ? (
+          <figure className="project-artifact">
+            <Image
+              src={p.artifact.src}
+              alt={p.artifact.alt}
+              width={1200}
+              height={1000}
+            />
+            <figcaption>{p.artifact.caption}</figcaption>
+          </figure>
+        ) : (
+          <ProjectVisual kind={p.kind} />
+        )}
         <aside className="project-facts" aria-label="Project information">
           <dl>
             <dt>PROJECT AREA</dt>

@@ -34,6 +34,13 @@ Both repositories were verified as public through the connected GitHub APIs.
 
 The code supports C++, Arduino Leonardo, PlatformIO, PPM interrupt input, atomic snapshots, deadband/exponential shaping, differential motor mixing, TB6612FNG motor output, arming/disarm handling, status LEDs, and serial debug output. The portfolio describes source behavior, not tested hardware performance or individual authorship. No reliable signal-loss protection claim is made: code inspection alone does not validate the freshness logic.
 
+### Clinical Mortality Prediction
+
+- Local source reviewed: `/Users/victorliao/Documents/EECS445/P1/project1.py`, `helper.py`, `config.yaml`, and saved evaluation outputs.
+- The project builds 40 features from the first 48 hours of ICU observations, imputes and normalizes features, uses stratified five-fold cross-validation, and compares logistic-regression and kernel-ridge models by AUROC.
+- `challenge_cv_logreg.csv` records AUROC 0.8036 for the L1 logistic-regression configuration with `C=1.0`; the site presents this as a saved cross-validation result, not a clinical claim.
+- `section3_3a_roc.png` is published as a portfolio figure. The raw patient data and class-project submission archive are not published.
+
 ## Local coursework used
 
 At the user's request, the project folders in Documents were reviewed read-only. No class source, datasets, assignment documents, or binaries are included in the portfolio bundle. `LOCAL_PROJECT_REVIEW.md` records the scope and unreviewed areas.
@@ -54,6 +61,7 @@ Course project dates were not inferred from file timestamps or copyright/scaffol
 - LinkedIn and GitHub URLs were provided directly and retained exactly.
 - `wenbinl@umich.edu` is verified in multiple résumés and used as the professional contact email.
 - `victorliao325@gmail.com` was provided directly by Wenbin and is published as an additional personal contact email.
+- `Downloads/image.jpg` was provided directly by Wenbin as the portrait to publish on the About page.
 - **Graduation:** Wenbin confirmed `Expected Graduation: December 2027` directly on September 10, 2026. This supersedes previously conflicting résumé variants and is used on the site and public résumé.
 - **Current employment:** “January 2026–Present” for MDP is supported by September 9 résumé variants. IBM’s May–August 2026 end date is supported by current documents and takes precedence over the older “Present” version.
 - Coursework titles follow the current software engineering and TC497 variants. No grades, GPA, enrollment completion status, or course performance is claimed.
@@ -65,7 +73,7 @@ Course project dates were not inferred from file timestamps or copyright/scaffol
 3. **Distributed MapReduce:** project dates and a verified public repository/demo URL are pending.
 4. **Lessons-Learned Retrieval Agent:** a verified public-safe source/demo URL is pending. MDP role dates and the documented implementation are included.
 5. **DormDash:** project dates, team context, Wenbin's individual contribution, and hardware testing are pending; the repository and user-provided presentation link are included.
-6. **Professional photo:** provide a portrait you want published. The About page reserves a labeled photo area and does not use a substitute image.
+6. **Clinical Mortality Prediction:** a project date and verified public source/demo link are pending. The portfolio uses only local implementation and saved experiment evidence; no raw data is published.
 7. **Intramural Supervisor:** omitted because none of the reviewed résumés establish this role. Provide résumé or other role evidence with organization, dates, and responsibilities to include it.
 8. **Full-Stack Social App:** project dates and a verified public repository/demo URL are pending.
 9. **Pipeline & Cache Simulators:** project dates and a verified public repository/demo URL are pending.

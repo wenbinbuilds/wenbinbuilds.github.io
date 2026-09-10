@@ -917,6 +917,16 @@ svg {
   background-size: 18px 18px;
   text-align: center;
 }
+.portrait {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  margin-bottom: 26px;
+  border: 1px solid #3c4d68;
+  border-radius: 7px;
+  object-fit: cover;
+  object-position: center 22%;
+}
 .portrait-placeholder span {
   font-family: var(--font-code);
   font-size: 1.5rem;
@@ -1152,6 +1162,26 @@ svg {
   border-radius: 10px;
   height: 290px;
   padding: 28px;
+}
+.project-artifact {
+  margin: 0;
+  min-height: 290px;
+  overflow: hidden;
+  border: 1px solid #374662;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+.project-artifact img {
+  display: block;
+  width: 100%;
+  height: 254px;
+  object-fit: contain;
+}
+.project-artifact figcaption {
+  padding: 9px 16px;
+  background: #101b2a;
+  color: #b7c8e1;
+  font-size: 0.75rem;
 }
 .detail-hero .visual-core {
   width: 95px;
@@ -1983,6 +2013,12 @@ svg {
   }
   .detail-hero > .project-visual {
     height: 240px;
+  }
+  .project-artifact {
+    min-height: 240px;
+  }
+  .project-artifact img {
+    height: 204px;
   }
   .project-facts {
     padding: 25px;
