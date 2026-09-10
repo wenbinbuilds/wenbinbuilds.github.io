@@ -4,7 +4,7 @@ import { Footer } from '@/components/portfolio';
 import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(
-    'https://wenbin-liao-portfolio.lucky-sky-6890.chatgpt.site',
+    'https://wenbin-liao-portfolio.blueprintvictorl.chatgpt.site',
   ),
   title: {
     default: 'Wenbin Liao — Software Engineer',
