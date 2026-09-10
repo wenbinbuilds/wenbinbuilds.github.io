@@ -52,6 +52,7 @@ Course project dates were not inferred from file timestamps or copyright/scaffol
 - IBM Software Developer Intern, San Jose, Summer 2026; Agent Evaluator association with Bobathon.
 - LinkedIn and GitHub URLs were provided directly and retained exactly.
 - `wenbinl@umich.edu` is verified in multiple résumés and used as the professional contact email.
+- `victorliao325@gmail.com` was provided directly by Wenbin and is published as an additional personal contact email.
 - **Graduation conflict:** the prompt says May 2028; the August and September résumés say April 2028. An older July file says May 2027. The older year was superseded by the user and recent documents. The site currently uses May 2028 with an explicit month-confirmation label, and the public PDF says `2028 (month pending)`. The user has been asked to choose April or May; do not silently resolve this conflict.
 - **Current employment:** “January 2026–Present” for MDP is supported by September 9 résumé variants. IBM’s May–August 2026 end date is supported by current documents and takes precedence over the older “Present” version.
 - Coursework titles follow the current software engineering and TC497 variants. No grades, GPA, enrollment completion status, or course performance is claimed.

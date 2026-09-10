@@ -3,6 +3,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/wenbinliao',
   github: 'https://github.com/wizice325',
   email: 'wenbinl@umich.edu' as string | null,
+  personalEmail: 'victorliao325@gmail.com' as string | null,
   resumeUrl: '/wenbin-liao-resume.pdf' as string | null,
   graduation: 'May 2028',
   graduationPending: true,

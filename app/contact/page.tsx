@@ -82,6 +82,18 @@ export default function Contact() {
               </div>
             </div>
           )}
+          {profile.personalEmail && (
+            <a className="contact-card" href={`mailto:${profile.personalEmail}`}>
+              <span className="contact-symbol">
+                <Mail size={20} />
+              </span>
+              <div>
+                <h2>Personal email</h2>
+                <p>{profile.personalEmail}</p>
+              </div>
+              <ArrowUpRight size={22} />
+            </a>
+          )}
         </div>
         <aside className="contact-aside">
           <h2>Let’s talk about building.</h2>
