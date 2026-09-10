@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { InternalLink as Link } from '@/components/internal-link';
 import { ArrowRight } from 'lucide-react';
 import { PageHeading } from '@/components/portfolio';
 export const metadata: Metadata = {

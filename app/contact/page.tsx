@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { InternalLink as Link } from '@/components/internal-link';
 import { ArrowUpRight, ArrowRight, Mail } from 'lucide-react';
 import { PageHeading, SocialIcon } from '@/components/portfolio';
 import { profile } from '@/lib/content';

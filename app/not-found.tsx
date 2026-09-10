@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { InternalLink as Link } from '@/components/internal-link';
 import { ArrowLeft } from 'lucide-react';
 export default function NotFound() {
   return (

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { InternalLink as Link } from '@/components/internal-link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowUpRight, ArrowRight } from 'lucide-react';
 import {
