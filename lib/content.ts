@@ -334,35 +334,4 @@ export const projects: Project[] = [
     contextPending:
       'Dates, team context, individual contribution, hardware testing, and any demo are not documented in the reviewed source.',
   },
-  {
-    slug: 'valentine',
-    title: 'Valentine',
-    category: 'FRONTEND / INTERACTION STUDY',
-    description:
-      'A small interactive web experiment using DOM events, responsive styling, and collision-aware button positioning.',
-    technologies: ['JavaScript', 'HTML', 'CSS'],
-    kind: 'web',
-    source: 'https://github.com/Wizice325/valentine',
-    problem:
-      'Explore how a simple invitation can respond to user input through changing text, position, and visual state.',
-    solution:
-      'Plain JavaScript handles clicks and updates the page. A positioning routine samples locations within the interaction area and checks for overlap with the other button.',
-    features: [
-      {
-        title: 'Event-driven UI',
-        text: 'DOM event listeners update button text, classes, position, and the result message.',
-      },
-      {
-        title: 'Layout-aware positioning',
-        text: 'Bounding rectangles and element dimensions inform button placement within the play area.',
-      },
-      {
-        title: 'Lightweight frontend',
-        text: 'HTML and CSS provide page structure and responsive presentation, with no frontend framework in the reviewed source.',
-      },
-    ],
-    evidence: 'Based on the public HTML, stylesheet, and interaction script.',
-    contextPending:
-      'Project dates, individual contribution, and a verified demo URL remain unconfirmed.',
-  },
 ];

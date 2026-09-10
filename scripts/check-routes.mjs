@@ -9,7 +9,6 @@ const routes = [
   '/contact',
   '/projects/wxo-agent-evaluator',
   '/projects/dormdash',
-  '/projects/valentine',
   '/projects/search-engine',
   '/projects/mapreduce',
   '/projects/lessons-learned-agent',

@@ -33,16 +33,6 @@ Both repositories were verified as public through the connected GitHub APIs.
 
 The code supports C++, Arduino Leonardo, PlatformIO, PPM interrupt input, atomic snapshots, deadband/exponential shaping, differential motor mixing, TB6612FNG motor output, arming/disarm handling, status LEDs, and serial debug output. The portfolio describes source behavior, not tested hardware performance or individual authorship. No reliable signal-loss protection claim is made: code inspection alone does not validate the freshness logic.
 
-### valentine
-
-- https://github.com/Wizice325/valentine
-- https://github.com/Wizice325/valentine/blob/main/index.html
-- https://github.com/Wizice325/valentine/blob/main/script.js
-- https://github.com/Wizice325/valentine/blob/main/style.css
-- Reviewed script blob: `7d8fdb28c2aa9e7fe956b20801db45e9c0dc4f77`
-
-Supports JavaScript, HTML, CSS, DOM events, label/class/position changes, bounding-box overlap checks, bounded random placement attempts, result updates, and responsive styling. Presented as a small interaction experiment. No personal images or invitation copy were reproduced, and no demo link was inferred.
-
 ## Local coursework used
 
 At the user's request, the project folders in Documents were reviewed read-only. No class source, datasets, assignment documents, or binaries are included in the portfolio bundle. `LOCAL_PROJECT_REVIEW.md` records the scope and unreviewed areas.
@@ -74,7 +64,7 @@ Course project dates were not inferred from file timestamps or copyright/scaffol
 4. **Distributed MapReduce:** project dates and a verified public repository/demo URL are pending.
 5. **Lessons-Learned Retrieval Agent:** a verified public-safe source/demo URL is pending. MDP role dates and the documented implementation are included.
 6. **DormDash:** project dates, team context, Wenbin's individual contribution, hardware testing, and a verified demo are pending; the repository link and source-grounded technical overview are included.
-7. **Valentine:** project dates, Wenbin's individual contribution, and a verified demo are pending; the repository link and technical overview are included.
+7. **Professional photo:** provide a portrait you want published. The About page reserves a labeled photo area and does not use a substitute image.
 8. **Intramural Supervisor:** omitted because none of the reviewed résumés establish this role. Provide résumé or other role evidence with organization, dates, and responsibilities to include it.
 9. **Full-Stack Social App:** project dates and a verified public repository/demo URL are pending.
 10. **Pipeline & Cache Simulators:** project dates and a verified public repository/demo URL are pending.

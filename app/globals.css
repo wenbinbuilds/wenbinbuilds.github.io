@@ -900,6 +900,34 @@ svg {
   border-radius: 10px;
   background: linear-gradient(130deg, #19263b, #111b2a);
 }
+.portrait-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  display: grid;
+  place-content: center;
+  gap: 7px;
+  margin-bottom: 26px;
+  border: 1px dashed #506783;
+  border-radius: 8px;
+  color: #b8d0f2;
+  background:
+    linear-gradient(#8198bb0d 1px, transparent 1px),
+    linear-gradient(90deg, #8198bb0d 1px, transparent 1px),
+    #101b2b;
+  background-size: 18px 18px;
+  text-align: center;
+}
+.portrait-placeholder span {
+  font-family: var(--font-code);
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+}
+.portrait-placeholder small {
+  color: #92a5c0;
+  font-family: var(--font-code);
+  font-size: 0.57rem;
+  letter-spacing: 0.14em;
+}
 .education-mark {
   width: 48px;
   height: 48px;

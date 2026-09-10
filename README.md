@@ -52,10 +52,16 @@ The project is configured for Sites / Cloudflare Workers. `.openai/hosting.json`
 
 The first hosted publication is private to the owner. It is not a public recruiter URL until you deliberately change its audience through Sites sharing controls. Update `metadataBase` in `app/layout.tsx` if the domain changes. Page metadata is already included; no unverified custom-domain URL or social-preview image is invented.
 
+### GitHub Pages
+
+The repository includes `.github/workflows/deploy-pages.yml`, which builds a static version and deploys it to a GitHub Pages **user site** repository named `wizice325.github.io`. After pushing to that repository, set Pages to use GitHub Actions; pushes to `main` then deploy automatically at `https://wizice325.github.io`.
+
+GitHub Pages is publicly reachable. A private GitHub repository can protect the source code, but does not make a personal GitHub Pages site private. Keep the Sites deployment for an owner-only portfolio, or use a hosting provider with access controls when the site itself must remain private.
+
 ## Accessibility and responsive behavior
 
 Semantic headings and landmarks, a skip link, current-page navigation, visible focus styles, labeled social links, an accessible disclosure menu, reduced-motion support, and desktop/tablet/mobile CSS are included. Main body text uses 16px or larger; the smallest decorative diagram labels are hidden from assistive technology where appropriate. Navigation has no mandatory animations.
 
 ## Content status
 
-Library was searched using the browser after the direct connector proved unavailable. The final portfolio uses six résumé/MDP sources, two public GitHub repositories, and local class-project implementations in Documents. See `LOCAL_PROJECT_REVIEW.md` for the coursework review and `CONTENT_SOURCES.md` for the full source ledger and every remaining placeholder. Original class source files and documents were not copied into the website. The only document in the public assets is the privacy-redacted résumé.
+Library was searched using the browser after the direct connector proved unavailable. The final portfolio uses six résumé/MDP sources, the public DormDash repository, and local class-project implementations in Documents. See `LOCAL_PROJECT_REVIEW.md` for the coursework review and `CONTENT_SOURCES.md` for the full source ledger and every remaining placeholder. Original class source files and documents were not copied into the website. The only document in the public assets is the privacy-redacted résumé.

@@ -2,10 +2,13 @@ import type { Metadata } from 'next';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/portfolio';
 import './globals.css';
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  'https://wenbin-liao-portfolio.blueprintvictorl.chatgpt.site';
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    'https://wenbin-liao-portfolio.blueprintvictorl.chatgpt.site',
-  ),
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'Wenbin Liao — Software Engineer',
     template: '%s | Wenbin Liao',

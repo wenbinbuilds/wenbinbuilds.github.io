@@ -56,6 +56,10 @@ export default function About() {
           </p>
         </div>
         <article className="education-card">
+          <div className="portrait-placeholder" aria-label="Professional photo pending">
+            <span aria-hidden="true">WL</span>
+            <small>PHOTO PENDING</small>
+          </div>
           <div className="education-mark" aria-hidden="true">
             M
           </div>
