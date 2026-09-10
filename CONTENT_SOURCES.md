@@ -28,6 +28,7 @@ Both repositories were verified as public through the connected GitHub APIs.
 - https://github.com/Wizice325/DormDash
 - https://github.com/Wizice325/DormDash/blob/main/src/main.cpp
 - https://github.com/Wizice325/DormDash/blob/main/platformio.ini
+- https://www.youtube.com/watch?v=aM6ehLUFxew — project presentation provided directly by Wenbin on September 10, 2026.
 - Reviewed tree: `31ab1195be232fe2e8d31871fff6ab3a24dcb4c0`
 - Firmware blob: `720784c7eb9cbca0759fb6317827c7bf9b2f5423`
 
@@ -53,27 +54,26 @@ Course project dates were not inferred from file timestamps or copyright/scaffol
 - LinkedIn and GitHub URLs were provided directly and retained exactly.
 - `wenbinl@umich.edu` is verified in multiple résumés and used as the professional contact email.
 - `victorliao325@gmail.com` was provided directly by Wenbin and is published as an additional personal contact email.
-- **Graduation conflict:** the prompt says May 2028; the August and September résumés say April 2028. An older July file says May 2027. The older year was superseded by the user and recent documents. The site currently uses May 2028 with an explicit month-confirmation label, and the public PDF says `2028 (month pending)`. The user has been asked to choose April or May; do not silently resolve this conflict.
+- **Graduation:** Wenbin confirmed `Expected Graduation: December 2027` directly on September 10, 2026. This supersedes previously conflicting résumé variants and is used on the site and public résumé.
 - **Current employment:** “January 2026–Present” for MDP is supported by September 9 résumé variants. IBM’s May–August 2026 end date is supported by current documents and takes precedence over the older “Present” version.
 - Coursework titles follow the current software engineering and TC497 variants. No grades, GPA, enrollment completion status, or course performance is claimed.
 
 ## Every remaining placeholder or omitted item
 
-1. **Graduation month:** confirm April or May 2028. Update `profile.graduation`, clear `profile.graduationPending`, and update the public PDF accordingly. The site marks this conflict on Home, About, and Resume.
-2. **Agent Evaluator:** provide any public-safe source/demo URL, exact project-specific dates, and verified Bobathon results if desired. Technical implementation is now supported; no stack/capability placeholders remain. Internal source links and documents are not exposed.
-3. **Search Engine:** project dates and a verified public repository/demo URL are pending.
-4. **Distributed MapReduce:** project dates and a verified public repository/demo URL are pending.
-5. **Lessons-Learned Retrieval Agent:** a verified public-safe source/demo URL is pending. MDP role dates and the documented implementation are included.
-6. **DormDash:** project dates, team context, Wenbin's individual contribution, hardware testing, and a verified demo are pending; the repository link and source-grounded technical overview are included.
-7. **Professional photo:** provide a portrait you want published. The About page reserves a labeled photo area and does not use a substitute image.
-8. **Intramural Supervisor:** omitted because none of the reviewed résumés establish this role. Provide résumé or other role evidence with organization, dates, and responsibilities to include it.
-9. **Full-Stack Social App:** project dates and a verified public repository/demo URL are pending.
-10. **Pipeline & Cache Simulators:** project dates and a verified public repository/demo URL are pending.
-11. **CNN & Vision Transformer:** project dates, verified model results if desired, and a public repository/demo URL are pending.
-12. **Electronic Trading Simulator:** project dates and a verified public repository/demo URL are pending.
+1. **Agent Evaluator:** provide any public-safe source/demo URL, exact project-specific dates, and verified Bobathon results if desired. Technical implementation is now supported; no stack/capability placeholders remain. Internal source links and documents are not exposed.
+2. **Search Engine:** project dates and a verified public repository/demo URL are pending.
+3. **Distributed MapReduce:** project dates and a verified public repository/demo URL are pending.
+4. **Lessons-Learned Retrieval Agent:** a verified public-safe source/demo URL is pending. MDP role dates and the documented implementation are included.
+5. **DormDash:** project dates, team context, Wenbin's individual contribution, and hardware testing are pending; the repository and user-provided presentation link are included.
+6. **Professional photo:** provide a portrait you want published. The About page reserves a labeled photo area and does not use a substitute image.
+7. **Intramural Supervisor:** omitted because none of the reviewed résumés establish this role. Provide résumé or other role evidence with organization, dates, and responsibilities to include it.
+8. **Full-Stack Social App:** project dates and a verified public repository/demo URL are pending.
+9. **Pipeline & Cache Simulators:** project dates and a verified public repository/demo URL are pending.
+10. **CNN & Vision Transformer:** project dates, verified model results if desired, and a public repository/demo URL are pending.
+11. **Electronic Trading Simulator:** project dates and a verified public repository/demo URL are pending.
 
 The résumé, professional email, coursework, skill list, IBM work, and MDP are no longer missing. No numeric metrics were added to the web pages. Metrics that already exist in the latest source résumé are preserved in the sanitized PDF, without embellishment.
 
 ## Public résumé privacy
 
-`public/wenbin-liao-resume.pdf` is derived from the latest QRT PDF. True PDF redaction removes the phone/header location/citizenship row and awards/scholarship row. Original metadata is cleared, unapproved link destinations are removed, and the conflicting graduation month is replaced by an explicit pending label. Text extraction and rendering are used to verify the result. The unmodified original remains in Downloads and is not committed. No home address, phone, grades, financial information, private documents, or secrets are in the published site.
+`public/wenbin-liao-resume.pdf` is derived from the latest QRT PDF. True PDF redaction removes the phone/header location/citizenship row and awards/scholarship row. Original metadata is cleared, unapproved link destinations are removed, and the graduation line is set to the user-confirmed December 2027 date. Text extraction and rendering are used to verify the result. The unmodified original remains in Downloads and is not committed. No home address, phone, grades, financial information, private documents, or secrets are in the published site.

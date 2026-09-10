@@ -5,6 +5,24 @@ import {
   SectionHeading,
 } from '@/components/portfolio';
 import { projects } from '@/lib/content';
+
+const projectGroups = [
+  {
+    title: 'AI & Machine Learning',
+    eyebrow: 'MODELS, AGENTS & EVALUATION',
+    description: 'Applied AI work spanning model training, retrieval, and agent evaluation.',
+  },
+  {
+    title: 'Python & Full-Stack',
+    eyebrow: 'SERVICES, DATA & INTERFACES',
+    description: 'Backend systems and web applications built around data, APIs, and user workflows.',
+  },
+  {
+    title: 'C++ & Systems',
+    eyebrow: 'PERFORMANCE, HARDWARE & ARCHITECTURE',
+    description: 'Low-level projects that explore control, performance, and system behavior.',
+  },
+] as const;
 export const metadata: Metadata = {
   title: 'Projects',
   description:
@@ -24,26 +42,19 @@ export default function Projects() {
         title="Different layers. Same curiosity."
         description="From agent tooling and distributed services to the processor underneath. Selected internship, research, and course projects."
       />
-      <section
-        aria-label="Selected engineering projects"
-        className="project-grid all-projects"
-      >
-        {projects
-          .filter((project) => !project.source)
-          .map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-      </section>
-      <section className="section">
-        <SectionHeading eyebrow="FROM MY GITHUB" title="More experiments." />
-        <div className="project-grid">
-          {projects
-            .filter((project) => project.source)
-            .map((project) => (
-              <ProjectCard key={project.slug} project={project} />
-            ))}
-        </div>
-      </section>
+      {projectGroups.map((group) => (
+        <section className="section project-group" key={group.title}>
+          <SectionHeading eyebrow={group.eyebrow} title={group.title} />
+          <p className="project-group-description">{group.description}</p>
+          <div className="project-grid">
+            {projects
+              .filter((project) => project.group === group.title)
+              .map((project) => (
+                <ProjectCard key={project.slug} project={project} />
+              ))}
+          </div>
+        </section>
+      ))}
       <p className="projects-footnote">
         Public source is linked where available. Internal project materials
         remain private; unverified source and demo links are marked pending.

@@ -1105,6 +1105,27 @@ svg {
   font-size: 0.875rem;
   max-width: 750px;
 }
+
+.project-group {
+  margin-top: 76px;
+}
+
+.project-group:first-of-type {
+  margin-top: 0;
+}
+
+.project-group-description {
+  max-width: 640px;
+  margin: -20px 0 28px;
+  color: var(--muted);
+}
+
+.project-external-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
 .breadcrumb {
   display: flex;
   align-items: center;

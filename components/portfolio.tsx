@@ -224,20 +224,35 @@ export function ProjectCard({ project }: { project: Project }) {
           </Link>
           {project.pending ? (
             <span className="pending-label">Case study pending</span>
-          ) : project.source ? (
-            <a
-              className="source-link"
-              href={project.source}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <SocialIcon kind="github" /> Source
-              <span className="sr-only"> (opens in a new tab)</span>
-            </a>
           ) : (
-            <span className="source-unavailable">
-              {project.sourceStatus || 'Source link pending'}
-            </span>
+            <div className="project-external-links">
+              {project.source ? (
+                <a
+                  className="source-link"
+                  href={project.source}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <SocialIcon kind="github" /> Source
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              ) : (
+                <span className="source-unavailable">
+                  {project.sourceStatus || 'Source link pending'}
+                </span>
+              )}
+              {project.presentation && (
+                <a
+                  className="source-link"
+                  href={project.presentation.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Presentation <ArrowUpRight size={15} />
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              )}
+            </div>
           )}
         </div>
       </div>

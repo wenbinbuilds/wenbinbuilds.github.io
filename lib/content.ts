@@ -5,8 +5,8 @@ export const profile = {
   email: 'wenbinl@umich.edu' as string | null,
   personalEmail: 'victorliao325@gmail.com' as string | null,
   resumeUrl: '/wenbin-liao-resume.pdf' as string | null,
-  graduation: 'May 2028',
-  graduationPending: true,
+  graduation: 'December 2027',
+  graduationPending: false,
 };
 export type Project = {
   slug: string;
@@ -14,6 +14,7 @@ export type Project = {
   category: string;
   description: string;
   technologies: string[];
+  group: 'AI & Machine Learning' | 'Python & Full-Stack' | 'C++ & Systems';
   kind:
     | 'agent'
     | 'embedded'
@@ -27,6 +28,7 @@ export type Project = {
     | 'trading';
   source: string | null;
   sourceStatus?: string;
+  presentation?: { label: string; url: string };
   pending?: boolean;
   problem: string;
   solution: string;
@@ -42,6 +44,7 @@ export const projects: Project[] = [
     description:
       'Making complex agent systems easier to inspect: recursive evaluation, system health scores, and actionable findings for watsonx Orchestrate.',
     technologies: ['Python', 'FastAPI', 'React', 'watsonx.ai'],
+    group: 'AI & Machine Learning',
     kind: 'agent',
     source: null,
     sourceStatus: 'Internal IBM project',
@@ -79,6 +82,7 @@ export const projects: Project[] = [
     description:
       'A service-oriented search platform that indexes a Wikipedia crawl and combines ranked results from distributed index services.',
     technologies: ['Python', 'MapReduce', 'Flask', 'PageRank', 'SQLite'],
+    group: 'Python & Full-Stack',
     kind: 'search',
     source: null,
     sourceStatus: 'EECS 485 coursework',
@@ -112,6 +116,7 @@ export const projects: Project[] = [
     description:
       'A Manager/Worker framework for scheduling distributed jobs, monitoring worker health, and recovering interrupted tasks.',
     technologies: ['Python', 'TCP / UDP', 'Multithreading', 'Linux'],
+    group: 'Python & Full-Stack',
     kind: 'distributed',
     source: null,
     sourceStatus: 'EECS 485 coursework',
@@ -145,6 +150,7 @@ export const projects: Project[] = [
     description:
       'A photo-sharing application connecting a React feed to authenticated Flask APIs, relational data, and asynchronous social interactions.',
     technologies: ['React', 'Flask', 'SQLite', 'REST APIs', 'Webpack'],
+    group: 'Python & Full-Stack',
     kind: 'fullstack',
     source: null,
     sourceStatus: 'EECS 485 coursework',
@@ -178,6 +184,7 @@ export const projects: Project[] = [
     description:
       'C implementations that model pipelined LC-2K execution and configurable cache behavior, from data hazards to dirty-block eviction.',
     technologies: ['C', 'LC-2K', 'Pipelining', 'Set-associative caches'],
+    group: 'C++ & Systems',
     kind: 'architecture',
     source: null,
     sourceStatus: 'EECS 370 coursework',
@@ -211,6 +218,7 @@ export const projects: Project[] = [
     description:
       'Image-classification coursework exploring convolutional and attention-based models through explicit PyTorch architectures and training loops.',
     technologies: ['Python', 'PyTorch', 'CNN', 'Vision Transformer'],
+    group: 'AI & Machine Learning',
     kind: 'vision',
     source: null,
     sourceStatus: 'EECS 445 coursework',
@@ -244,6 +252,7 @@ export const projects: Project[] = [
     description:
       'A C++ order-matching simulator using priority queues to manage price-and-arrival ordering, partial fills, and running trade statistics.',
     technologies: ['C++', 'STL', 'Priority queues', 'Heaps'],
+    group: 'C++ & Systems',
     kind: 'trading',
     source: null,
     sourceStatus: 'EECS 281 coursework',
@@ -277,6 +286,7 @@ export const projects: Project[] = [
     description:
       'A retrieval-based assistant connecting current project questions to relevant historical lessons, risks, and supporting evidence.',
     technologies: ['Copilot Studio', 'Dataverse', 'SharePoint', 'RAG'],
+    group: 'AI & Machine Learning',
     kind: 'retrieval',
     source: null,
     sourceStatus: 'Enterprise project',
@@ -310,8 +320,13 @@ export const projects: Project[] = [
     description:
       'From radio input to motor output: Arduino firmware that decodes PPM signals and mixes steering and throttle for differential drive.',
     technologies: ['C++', 'Arduino', 'PlatformIO'],
+    group: 'C++ & Systems',
     kind: 'embedded',
     source: 'https://github.com/Wizice325/DormDash',
+    presentation: {
+      label: 'Watch project presentation',
+      url: 'https://www.youtube.com/watch?v=aM6ehLUFxew',
+    },
     problem:
       'Translate radio-controller steering and throttle signals into coordinated motor commands for a differential-drive platform.',
     solution:
@@ -333,6 +348,6 @@ export const projects: Project[] = [
     evidence:
       'Based on the public main.cpp firmware and platformio.ini configuration.',
     contextPending:
-      'Dates, team context, individual contribution, hardware testing, and any demo are not documented in the reviewed source.',
+      'Dates, team context, individual contribution, and hardware testing are not documented in the reviewed source.',
   },
 ];

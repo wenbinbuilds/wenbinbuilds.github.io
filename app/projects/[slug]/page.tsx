@@ -89,6 +89,22 @@ export default async function ProjectDetail({ params }: Props) {
                 </>
               )}
             </dd>
+            {p.presentation && (
+              <>
+                <dt>PRESENTATION</dt>
+                <dd>
+                  <a
+                    className="text-link"
+                    href={p.presentation.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {p.presentation.label} <ArrowUpRight size={16} />
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </a>
+                </dd>
+              </>
+            )}
           </dl>
         </aside>
       </div>

@@ -34,13 +34,13 @@ npm run start
 
 ### Update the résumé and contact information
 
-A public-safe copy of the latest visible Library résumé is already in `public/wenbin-liao-resume.pdf`; the Resume page embeds it and offers download/open links. The phone/header location/citizenship row and award/scholarship row are truly redacted, metadata is cleared, and the conflicting graduation month is explicitly marked pending. The professional email is verified in multiple résumés.
+A public-safe copy of the latest visible Library résumé is already in `public/wenbin-liao-resume.pdf`; the Resume page embeds it and offers download/open links. The phone/header location/citizenship row and award/scholarship row are truly redacted, metadata is cleared, and the graduation date is set to the user-confirmed December 2027. The professional email is verified in multiple résumés.
 
 When replacing the PDF, remove home address, phone, grades/GPA, financial details, and private metadata before copying it into `public/`. Do not add original source documents to the public folder. Keep `profile.resumeUrl` pointing to a real file; setting it to null restores the “Resume available on request” fallback. Setting `profile.email` to null restores the labeled email fallback.
 
-### Resolve the graduation month
+### Update the graduation date
 
-The prompt says May 2028 while the current résumés say April 2028. Set `profile.graduation` to the confirmed month and clear `profile.graduationPending` once the owner resolves this. Update the public PDF's graduation line as well. Until then the conflict is explicitly labeled. The site does not infer a date from the older May 2027 résumé.
+The site currently uses the user-confirmed December 2027 date. If the degree plan changes, update `profile.graduation` and the public PDF's graduation line together.
 
 ### Update projects and experience
 
