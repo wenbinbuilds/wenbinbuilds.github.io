@@ -35,7 +35,6 @@ export type Project = {
   problem: string;
   solution: string;
   features: { title: string; text: string }[];
-  contextPending?: string;
   evidence: string;
 };
 export const projects: Project[] = [
@@ -74,8 +73,6 @@ export const projects: Project[] = [
     ],
     evidence:
       'Agent Evaluator / Bobathon work from my IBM Software Developer Internship in San Jose, Summer 2026.',
-    contextPending:
-      'A public source or demo link, project-specific dates, and any Bobathon results remain unverified.',
   },
   {
     slug: 'search-engine',
@@ -108,8 +105,6 @@ export const projects: Project[] = [
     ],
     evidence:
       'Web Systems coursework at the University of Michigan, connecting batch indexing with concurrent query services. Reviewed against the local indexing and search implementation.',
-    contextPending:
-      'Project dates and a public repository or demo URL are pending.',
   },
   {
     slug: 'mapreduce',
@@ -142,8 +137,6 @@ export const projects: Project[] = [
     ],
     evidence:
       'Web Systems coursework at the University of Michigan. The local Manager and Worker implementations establish the scheduling, networking, and recovery behavior described here.',
-    contextPending:
-      'Project dates and a public repository or demo URL are pending.',
   },
   {
     slug: 'full-stack-social-app',
@@ -176,8 +169,6 @@ export const projects: Project[] = [
     ],
     evidence:
       'Insta485 coursework for Web Systems at the University of Michigan. The local React components and Flask API support the implementation described here.',
-    contextPending:
-      'Project dates and a public repository or demo URL are pending.',
   },
   {
     slug: 'pipeline-cache-simulators',
@@ -210,8 +201,6 @@ export const projects: Project[] = [
     ],
     evidence:
       'Two Computer Organization course projects at the University of Michigan. Descriptions are based on the local pipeline simulator and cache implementation.',
-    contextPending:
-      'Project dates and a public repository or demo URL are pending.',
   },
   {
     slug: 'cnn-vision-transformer',
@@ -244,8 +233,6 @@ export const projects: Project[] = [
     ],
     evidence:
       'Introduction to Machine Learning coursework at the University of Michigan. Model components were implemented within provided course scaffolding.',
-    contextPending:
-      'Project dates, verified model results, and a public repository or demo URL are pending.',
   },
   {
     slug: 'electronic-trading-simulator',
@@ -278,8 +265,6 @@ export const projects: Project[] = [
     ],
     evidence:
       'Data Structures and Algorithms coursework at the University of Michigan, modeling order processing and incremental statistics in a C++ simulator.',
-    contextPending:
-      'Project dates and a public repository or demo URL are pending.',
   },
   {
     slug: 'lessons-learned-agent',
@@ -312,8 +297,6 @@ export const projects: Project[] = [
     ],
     evidence:
       'Part of my undergraduate AI research work with Walbridge through the University of Michigan Multidisciplinary Design Program, January 2026–Present.',
-    contextPending:
-      'A public source or demo link is pending; internal enterprise records are not included.',
   },
   {
     slug: 'clinical-mortality-prediction',
@@ -351,16 +334,14 @@ export const projects: Project[] = [
     ],
     evidence:
       'EECS 445 Project 1 implementation and saved experiment outputs reviewed from the local course project directory.',
-    contextPending:
-      'A project date and a public source or demo link are pending.',
   },
   {
     slug: 'dormdash',
-    title: 'DormDash',
-    category: 'EMBEDDED SYSTEMS / MOTOR CONTROL',
+    title: 'Dorm Dash',
+    category: 'ROBOTICS / CAMPUS DELIVERY',
     description:
-      'From radio input to motor output: Arduino firmware that decodes PPM signals and mixes steering and throttle for differential drive.',
-    technologies: ['C++', 'Arduino', 'PlatformIO'],
+      'A student-centered delivery robot concept for bringing food, packages, and essentials directly to rooms in Bursley Hall.',
+    technologies: ['C++', 'Arduino', 'mBot', 'FPV camera', 'Radio control'],
     group: 'C++ & Systems',
     kind: 'embedded',
     source: 'https://github.com/Wizice325/DormDash',
@@ -369,26 +350,28 @@ export const projects: Project[] = [
       url: 'https://www.youtube.com/watch?v=aM6ehLUFxew',
     },
     problem:
-      'Translate radio-controller steering and throttle signals into coordinated motor commands for a differential-drive platform.',
+      'Dorm residents can face inconsistent delivery timing, missed packages, and unclear communication with couriers. Bursley Hall’s access constraints and volume of daily deliveries make direct, dependable handoff especially difficult.',
     solution:
-      'The public firmware targets an Arduino Leonardo. An interrupt routine decodes PPM input, and the control loop shapes the channels and mixes motor outputs through a TB6612FNG driver.',
+      'Dorm Dash combines a mobile Arduino-based platform with real-time remote monitoring and clear user feedback. The team designed it to carry deliveries through the residence hall while signaling when it needs human assistance at elevators or other barriers.',
     features: [
       {
-        title: 'Input processing',
-        text: 'PPM frame detection, pulse clamping, and atomic channel snapshots connect receiver input to the control loop.',
+        title: 'Remote operation and visibility',
+        text: 'An FPV camera, radio antenna, and remote controller provide a live view of the robot’s surroundings and responsive control throughout the building.',
       },
       {
-        title: 'Drive control',
-        text: 'Deadband and exponential shaping feed a differential mixer, which normalizes outputs before writing motor PWM.',
+        title: 'Mobile delivery platform',
+        text: 'A 12V battery, DC motor speed controller, and tank treads drive the robot, while Arduino firmware translates radio input into differential motor control.',
       },
       {
-        title: 'Operating controls',
-        text: 'The source includes an arming channel, disarm handling, status LED behavior, and serial debug output.',
+        title: 'Human-centered assistance',
+        text: 'An LCD display and speaker can notify recipients and clearly request help when the robot encounters an elevator, access point, or other obstacle.',
+      },
+      {
+        title: 'Research-informed design',
+        text: 'Student interviews and human-robot interaction research informed recommendations for safe waiting, staff notification, accessibility, and approachable communication.',
       },
     ],
     evidence:
-      'Based on the public main.cpp firmware and platformio.ini configuration.',
-    contextPending:
-      'Dates, team context, individual contribution, and hardware testing are not documented in the reviewed source.',
+      'Team project scoped for Bursley Hall at the University of Michigan. The design brief and public Arduino firmware informed this summary.',
   },
 ];

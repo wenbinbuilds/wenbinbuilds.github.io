@@ -6,7 +6,6 @@ import { ArrowLeft, ArrowUpRight, ArrowRight } from 'lucide-react';
 import {
   PageHeading,
   ProjectVisual,
-  Placeholder,
   SocialIcon,
 } from '@/components/portfolio';
 import { projects } from '@/lib/content';
@@ -174,13 +173,6 @@ export default async function ProjectDetail({ params }: Props) {
               </Link>
             )}
           </section>
-          {p.contextPending && (
-            <section>
-              <Placeholder title="Additional details pending">
-                <p>{p.contextPending}</p>
-              </Placeholder>
-            </section>
-          )}
           {p.kind === 'embedded' && (
             <section>
               <a
