@@ -6,7 +6,7 @@ import { profile } from '@/lib/content';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Meet Wenbin Liao, a University of Michigan Computer Science student with a Mathematics minor, interested in systems, AI engineering, and developer tools.',
+    'Meet Wenbin Liao, a University of Michigan Computer Science student with a Mathematics minor, focused on agentic AI, systems, and practical developer tools.',
   openGraph: {
     title: 'About Wenbin Liao',
     description:
@@ -33,27 +33,29 @@ export default function About() {
       <PageHeading
         number="01"
         kicker="ABOUT"
-        title="Curious about what’s underneath."
-        description="I’m Wenbin Liao, a Computer Science student at the University of Michigan with a minor in Mathematics."
+        title="Building AI systems people can rely on."
+        description="I’m Wenbin Liao, a Computer Science student at the University of Michigan with a minor in Mathematics, interested in agentic AI and the systems that make it useful."
       />
       <div className="about-layout">
         <div className="prose">
-          <h2>From the interface to the system.</h2>
+          <h2>From an idea to a dependable system.</h2>
           <p>
-            I’m interested in how software fits together: the systems underneath
-            an application, the intelligence behind it, and the tools that make
-            it useful.
+            I like working on agentic AI: systems that can reason through a
+            task, use tools and relevant knowledge, and give people useful
+            results. I’m especially interested in making those systems clear,
+            grounded, and dependable—not just impressive in a demo.
           </p>
           <p>
             At IBM, I worked on QA automation and built tooling to inspect
             complex agent systems. Through Michigan’s Multidisciplinary Design
-            Program, I work on retrieval systems that connect questions to
-            relevant enterprise knowledge.
+            Program, I work on retrieval systems that help connect questions
+            with relevant enterprise knowledge and supporting evidence.
           </p>
           <p>
-            I’m drawn to engineering work that combines clear interfaces,
-            careful evaluation, and a solid understanding of the system behind
-            them.
+            I enjoy the full engineering path behind an AI product: designing
+            the workflow, connecting models to APIs and data, evaluating what
+            goes wrong, and building an interface that makes the result easy to
+            understand and act on.
           </p>
         </div>
         <article className="education-card">
@@ -99,24 +101,28 @@ export default function About() {
             <Cpu size={24} />
             <h3>Systems</h3>
             <p>
-              Concurrency, distributed processing, and the relationship between
-              software and hardware.
+              The foundations that keep software reliable and fast: how programs
+              run concurrently, how services communicate across machines, and
+              how hardware and memory shape performance.
             </p>
           </article>
           <article className="interest-card">
             <Layers size={24} />
-            <h3>AI engineering</h3>
+            <h3>Agentic AI engineering</h3>
             <p>
-              Useful agent workflows, grounded retrieval, and evaluation that
-              makes failures easier to understand.
+              Building AI agents that break work into steps, call tools, and
+              retrieve the right context. I care about grounding responses in
+              evidence, evaluating behavior, and making failures visible so the
+              system can improve.
             </p>
           </article>
           <article className="interest-card">
             <Terminal size={24} />
             <h3>Full-stack tools</h3>
             <p>
-              Connecting APIs and interfaces to make complex engineering tasks
-              easier to work with.
+              Turning complex workflows into useful products by connecting a
+              clear interface with APIs, backend services, and data. The goal is
+              to give people control and make technical work easier to follow.
             </p>
           </article>
         </div>
