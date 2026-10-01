@@ -61,7 +61,7 @@ export function Footer() {
       </div>
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} Wenbin Liao</span>
-        <span className="mono">BUILT WITH CARE. ALWAYS LEARNING.</span>
+        <span className="mono">ANN ARBOR, MICHIGAN</span>
         <Link href="/contact">
           Let’s connect <ArrowUpRight size={14} />
         </Link>
@@ -115,8 +115,8 @@ export function IBMCard() {
       </div>
       <Link
         className="ibm-card-link"
-        href="/experience"
-        aria-label="Read about my IBM experience"
+        href="/resume"
+        aria-label="Read my resume"
       >
         <ArrowUpRight size={26} />
       </Link>

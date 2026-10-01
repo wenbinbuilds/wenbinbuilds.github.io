@@ -6,7 +6,6 @@ import { ArrowUpRight, Menu, X } from 'lucide-react';
 const navigation = [
   ['/', 'Home'],
   ['/about', 'About'],
-  ['/experience', 'Experience'],
   ['/projects', 'Projects'],
   ['/resume', 'Resume'],
   ['/contact', 'Contact'],

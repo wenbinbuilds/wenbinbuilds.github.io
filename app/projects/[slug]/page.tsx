@@ -163,12 +163,12 @@ export default async function ProjectDetail({ params }: Props) {
             <h2>Project context</h2>
             <p>{p.evidence}</p>
             {p.kind === 'agent' && (
-              <Link className="text-link" href="/experience">
-                IBM internship <ArrowRight size={16} />
+              <Link className="text-link" href="/resume">
+                IBM experience <ArrowRight size={16} />
               </Link>
             )}
             {p.kind === 'retrieval' && (
-              <Link className="text-link" href="/experience#mdp">
+              <Link className="text-link" href="/resume">
                 Walbridge MDP experience <ArrowRight size={16} />
               </Link>
             )}

@@ -33,12 +33,26 @@ export default function About() {
       <PageHeading
         number="01"
         kicker="ABOUT"
-        title="Building AI systems people can rely on."
-        description="I’m Wenbin Liao, a Computer Science student at the University of Michigan with a minor in Mathematics, interested in agentic AI and the systems that make it useful."
+        title="About me"
+        description="Computer Science student at the University of Michigan, with a minor in Mathematics."
       />
       <div className="about-layout">
+        <article className="education-card">
+          <Image
+            className="portrait"
+            src="/wenbin-liao-headshot.jpg"
+            alt="Wenbin Liao in a suit and tie"
+            width={2733}
+            height={3643}
+            priority
+          />
+          <p className="eyebrow">EDUCATION</p>
+          <h2>University of Michigan</h2>
+          <p>B.S.E. in Computer Science<br />Minor in Mathematics</p>
+          <div className="inline-meta"><span>Expected graduation · {profile.graduation}</span></div>
+        </article>
         <div className="prose">
-          <h2>From an idea to a dependable system.</h2>
+          <h2>What I work on</h2>
           <p>
             I like working on agentic AI: systems that can reason through a
             task, use tools and relevant knowledge, and give people useful
@@ -58,43 +72,11 @@ export default function About() {
             understand and act on.
           </p>
         </div>
-        <article className="education-card">
-          <Image
-            className="portrait"
-            src="/wenbin-liao-headshot.jpg"
-            alt="Wenbin Liao in a suit and tie"
-            width={2733}
-            height={3643}
-            priority
-          />
-          <div className="education-mark" aria-hidden="true">
-            M
-          </div>
-          <p className="eyebrow">EDUCATION</p>
-          <h2>University of Michigan</h2>
-          <p>
-            B.S.E. in Computer Science
-            <br />
-            Minor in Mathematics
-          </p>
-          <div className="inline-meta">
-            <span>Expected graduation · {profile.graduation}</span>
-          </div>
-          {profile.graduationPending && (
-            <div className="graduation-note">
-              <span className="pending-label">MONTH PENDING CONFIRMATION</span>
-              <p>
-                The profile uses May as requested; recent résumés list April
-                2028.
-              </p>
-            </div>
-          )}
-        </article>
       </div>
       <section className="section">
         <SectionHeading
           eyebrow="TECHNICAL INTERESTS"
-          title="What I’m drawn to."
+          title="Areas of interest"
         />
         <div className="interest-grid">
           <article className="interest-card">

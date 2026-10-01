@@ -1,117 +1,34 @@
 import type { Metadata } from 'next';
-import { ArrowUpRight, FileText, Download } from 'lucide-react';
+import { Download } from 'lucide-react';
 import { PageHeading } from '@/components/portfolio';
 import { profile } from '@/lib/content';
+
 export const metadata: Metadata = {
   title: 'Resume',
-  description:
-    'View or download Wenbin Liao’s current résumé, with private contact and personal details removed.',
-  openGraph: {
-    title: 'Resume — Wenbin Liao',
-    description:
-      'Wenbin Liao’s education, experience, and engineering projects.',
-  },
+  description: 'Wenbin Liao’s education, experience, projects, and technical skills.',
 };
+
+const roles = [
+  { date: 'May – August 2026', location: 'San Jose, CA', organization: 'IBM Silicon Valley Lab', title: 'Software Developer Intern', bullets: ['Built a Python/FastAPI and React tool that recursively inspects agent, tool, and collaborator hierarchies, producing health scores and actionable recommendations.', 'Implemented parallel, two-pass analysis with watsonx.ai, streaming per-node findings and progress to the interface; added run history, exports, fuzzy search, and caching.', 'Automated end-to-end regression tests, reproduced product defects, reviewed logs and test output, and validated fixes for watsonx Orchestrate.'] },
+  { date: 'January 2026 – Present', location: 'Ann Arbor, MI', organization: 'Walbridge · Multidisciplinary Design Program', title: 'Undergraduate AI Researcher', bullets: ['Built a retrieval workflow for natural-language access to historical lessons, root causes, impacts, and project risks while preserving role-based access boundaries.', 'Separated orchestration, query generation, retrieval, filtering, and summarization into independently testable stages.', 'Evaluated relevance, accuracy, completeness, and groundedness; incorporated feedback from industry stakeholders and faculty mentors.'] },
+  { date: 'July – August 2023', location: 'Quincy, MA', organization: 'Quincy College', title: 'Information Technology Intern', bullets: ['Diagnosed hardware, software, network connectivity, authentication, and account issues for campus users.', 'Used SQL in the Jenzabar information system for schema-aware queries, data cleaning, and multi-table joins.'] },
+];
+
 export default function Resume() {
   return (
     <main id="main-content" className="page-shell container">
-      <PageHeading
-        number="04"
-        kicker="RESUME"
-        title="The essentials, in one place."
-        description="Education, experience, and engineering projects. View the résumé below or take a copy with you."
-      />
-      {profile.resumeUrl ? (
-        <>
-          <div className="resume-toolbar">
-            <div>
-              <p>Wenbin Liao · Résumé</p>
-              <span className="subtle">Public copy · PDF</span>
-            </div>
-            <div className="actions">
-              <a
-                className="button secondary"
-                href={profile.resumeUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open PDF <ArrowUpRight size={17} />
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>
-              <a className="button primary" href={profile.resumeUrl} download>
-                <Download size={17} /> Download résumé
-              </a>
-            </div>
-          </div>
-          {profile.graduationPending && (
-            <p className="resume-date-note">
-              <span className="pending-label">MONTH PENDING CONFIRMATION</span>{' '}
-              Recent source résumés say April 2028; this profile was requested
-              with May 2028. The PDF labels the month as pending.
-            </p>
-          )}
-          <iframe
-            className="resume-document"
-            src={profile.resumeUrl}
-            title="Wenbin Liao résumé"
-          >
-            <a href={profile.resumeUrl}>Open résumé PDF</a>
-          </iframe>
-          <p className="resume-source-note">
-            Based on the latest Library résumé reviewed, dated September 9,
-            2026. Personal contact and other private details have been removed;
-            the professional email is retained.
-          </p>
-        </>
-      ) : (
-        <div className="resume-panel">
-          <section className="resume-primary">
-            <FileText size={40} strokeWidth={1.25} />
-            <div>
-              <span className="pending-label">RESUME PLACEHOLDER</span>
-            </div>
-            <h2>Resume available on request.</h2>
-            <p>
-              A current résumé PDF has not yet been added. Connect with me on
-              LinkedIn to request a copy.
-            </p>
-            <a
-              className="button primary"
-              href={profile.linkedin}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Request on LinkedIn <ArrowUpRight size={18} />
-              <span className="sr-only"> (opens in a new tab)</span>
-            </a>
-          </section>
-          <aside className="resume-context">
-            <h3>At a glance</h3>
-            <dl className="summary-list">
-              <dt>EDUCATION</dt>
-              <dd>
-                University of Michigan
-                <br />
-                Computer Science
-              </dd>
-              <dt>EXPECTED GRADUATION</dt>
-              <dd>{profile.graduation}</dd>
-              <dt>EXPERIENCE</dt>
-              <dd>
-                IBM · Software Developer Intern
-                <br />
-                Summer 2026 · San Jose
-              </dd>
-              <dt>INTERESTS</dt>
-              <dd>
-                Systems · AI engineering
-                <br />
-                Full-stack developer tools
-              </dd>
-            </dl>
-          </aside>
-        </div>
-      )}
+      <PageHeading number="02" kicker="RESUME" title="Resume" description="Education, experience, selected work, and technical skills." />
+      <div className="resume-toolbar"><p>Wenbin Liao</p><a className="button primary" href={profile.resumeUrl ?? '#'} download><Download size={17} /> Download PDF</a></div>
+      <div className="resume-content">
+        <section className="resume-section">
+          <h2>Education</h2>
+          <div className="resume-entry"><div><h3>University of Michigan</h3><p>B.S.E. in Computer Science, Minor in Mathematics</p></div><p>Ann Arbor, MI<br />Expected {profile.graduation}</p></div>
+          <p className="resume-coursework"><strong>Relevant coursework:</strong> Data Structures and Algorithms, Web Systems, Computer Organization, Applied Agentic Software Engineering, Introduction to Machine Learning.</p>
+        </section>
+        <section className="resume-section"><h2>Experience</h2>{roles.map((role) => <article className="resume-role" key={role.title}><div className="resume-entry"><div><h3>{role.title}</h3><p>{role.organization}</p></div><p>{role.location}<br />{role.date}</p></div><ul>{role.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul></article>)}</section>
+        <section className="resume-section"><h2>Selected projects</h2><div className="resume-projects"><p><strong>wxO Agent Evaluator</strong> · Python, FastAPI, React, watsonx.ai — Internal full-stack tool for recursively evaluating agent hierarchies.</p><p><strong>Search Engine</strong> · Python, MapReduce, Flask, PageRank — Distributed search platform with TF-IDF indexing and concurrent retrieval.</p><p><strong>Clinical Mortality Prediction</strong> · Python, scikit-learn — Reproducible ICU mortality prediction workflow with AUROC-focused evaluation.</p></div></section>
+        <section className="resume-section"><h2>Skills</h2><p><strong>Languages:</strong> Python, C/C++, TypeScript, JavaScript, Java, SQL</p><p><strong>Tools:</strong> React, FastAPI, Flask, PyTorch, RAG, Linux, Git, SQLite, MapReduce</p></section>
+      </div>
     </main>
   );
 }

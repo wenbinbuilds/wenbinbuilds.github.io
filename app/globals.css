@@ -251,9 +251,9 @@ svg {
   border-radius: 7px;
 }
 .hero {
-  padding-block: 96px 90px;
+  padding-block: 88px 104px;
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
   align-items: center;
   gap: 54px;
 }
@@ -289,6 +289,22 @@ svg {
 }
 .hero h1 span {
   color: var(--blue);
+}
+.home-portrait {
+  max-width: 370px;
+  justify-self: end;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid #354866;
+  border-radius: 10px;
+  background: #111d2e;
+}
+.home-portrait img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 22%;
 }
 .hero-description {
   margin-top: 25px;
@@ -900,6 +916,9 @@ svg {
   border-radius: 10px;
   background: linear-gradient(130deg, #19263b, #111b2a);
 }
+.about-layout .education-card {
+  align-self: start;
+}
 .portrait-placeholder {
   width: 100%;
   aspect-ratio: 16 / 8;
@@ -1215,9 +1234,13 @@ svg {
   margin: 11px 0 20px;
 }
 .detail-content {
-  display: grid;
-  grid-template-columns: 1.65fr 1fr;
-  gap: 56px;
+  display: block;
+  max-width: 850px;
+}
+.detail-content > aside {
+  margin-top: 35px;
+  padding-top: 30px;
+  border-top: 1px solid #2a3a51;
 }
 .detail-content h2 {
   font-size: 1.75rem;
@@ -2268,6 +2291,56 @@ svg {
   padding-top: 19px;
   max-width: 760px;
 }
+.resume-content {
+  max-width: 920px;
+  border: 1px solid #344760;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  padding: 12px 34px 38px;
+  background: #101b2a;
+}
+.resume-section {
+  padding-top: 32px;
+}
+.resume-section + .resume-section {
+  border-top: 1px solid #2b3b52;
+  margin-top: 32px;
+}
+.resume-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.resume-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+.resume-entry h3 {
+  font-size: 1.05rem;
+  letter-spacing: 0;
+}
+.resume-entry > p {
+  flex-shrink: 0;
+  text-align: right;
+  font-size: .875rem;
+  line-height: 1.55;
+}
+.resume-coursework,
+.resume-section > p {
+  font-size: .9375rem;
+  line-height: 1.75;
+}
+.resume-role + .resume-role {
+  margin-top: 28px;
+}
+.resume-role ul {
+  margin: 13px 0 0;
+  padding-left: 20px;
+  color: var(--text-secondary);
+}
+.resume-role li + li { margin-top: 8px; }
+.resume-projects p + p { margin-top: 14px; }
 .project-detail-heading {
   padding: 0;
 }
@@ -2278,6 +2351,10 @@ svg {
   grid-column: auto;
 }
 @media (max-width: 650px) {
+  .home-portrait { max-width: 300px; justify-self: start; }
+  .resume-content { padding: 8px 22px 30px; }
+  .resume-entry { flex-direction: column; gap: 5px; }
+  .resume-entry > p { text-align: left; }
   .evaluation-flow {
     grid-template-columns: 1fr;
     margin-bottom: 32px;
