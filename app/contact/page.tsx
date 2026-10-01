@@ -99,7 +99,7 @@ export default function Contact() {
           <h2>Let’s talk about building.</h2>
           <p>
             I’m a University of Michigan Computer Science student graduating in
-            May 2028, interested in software that connects useful interfaces
+            December 2027, interested in software that connects useful interfaces
             with thoughtful engineering.
           </p>
           <ul className="tags">

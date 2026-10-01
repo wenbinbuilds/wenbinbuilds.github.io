@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: 'Wenbin Liao — Software Engineer',
     template: '%s | Wenbin Liao',
   },
-  description: `Wenbin Liao, University of Michigan Computer Science student graduating in 2028. Software engineering, systems, AI engineering, and full-stack developer tools.`,
+  description: `Wenbin Liao, University of Michigan Computer Science student graduating in December 2027. Software engineering, systems, AI engineering, and full-stack developer tools.`,
   authors: [{ name: 'Wenbin Liao' }],
   openGraph: {
     title: 'Wenbin Liao — Software Engineer',
